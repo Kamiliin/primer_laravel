@@ -24,3 +24,7 @@ Route::get('/nosotros', function () {
 Route::get('/tienda', function () {
     return view('tienda');
 });
+
+Route::get('/app', function () {
+    return view('layouts.app');
+});

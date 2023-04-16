@@ -3,24 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <title>devstagram - @yield('titulo')</title>
+        <script src="{{ asset('js/app.js') }}" defer></script>   
+
     </head>
 
-    <body>
-        <nav>
-            <a href="/">principal</a>
-            <a href="/nosotros">nosotros</a>
-            <a href="/tienda">tienda</a>
-         
-        </nav>
+    <body class="bg-gray-50">
+        <header class="p-5 border-b bg-white shadow">
 
-        <h1>@yield('titulo')</h1>
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-3xl font-black">
+                    devstagram
+                </h1>
 
-        <hr>
-
-
-        @yield('contenido')
-
+                <nav>
+                    <a href="#">login</a>
+                    <a href="#">crear cuenta</a>
+                </nav>
+            </div>
+            
+        </header>
     </body>
 </html>
