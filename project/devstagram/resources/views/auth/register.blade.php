@@ -1,13 +1,10 @@
-
 @extends('layouts.app')
 
 @section('titulo')
-    Principal
+    ¡Registrate!
 @endsection
 
 
 @section('contenido')
     unos parrafos 
 @endsection
-
-
