@@ -36,7 +36,7 @@
         </main>
 
         <footer class="mt-10 text-center p-5 text-gray-500 font-bold uppercase">
-            <p>Primer desarrollo en pho con laravel de kamilo Robledo {{now()->year}}</p>
+            <p>Primer desarrollo en php con laravel de kamilo Robledo {{now()->year}}</p>
         </footer>
     </body>
 </html>
