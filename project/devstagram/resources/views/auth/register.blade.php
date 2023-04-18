@@ -9,7 +9,7 @@
     <div class="md:flex md:justify-center md:gap-11 md:items-center">
 
         <div class="md:w-7/12 p-5">
-            <img src="{{ asset('img/registrar.jpg')}}" alt="registro de usuarios">
+            <img src="{{ asset('img/registra.jpg')}}" alt="registro de usuarios">
         </div>
 
         <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">

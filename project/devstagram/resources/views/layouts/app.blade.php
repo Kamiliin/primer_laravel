@@ -5,8 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <title>devstagram - @yield('titulo')</title>
+        <title>KamIvan - @yield('titulo')</title>
         <script src="{{ asset('js/app.js') }}" defer></script>   
+        <link rel="icon" type="png" href="img/futbol.png">
 
     </head>
 
@@ -15,13 +16,35 @@
 
             <div class="container mx-auto flex justify-between items-center">
                 <h1 class="text-3xl font-extrabold">
-                    futbol
+                    ¡Todo Sobre Futbol!
                 </h1>
 
-                <nav class="flex gap-2">
-                    <a class="font-bold uppercase text-gray-600 text-sm" href="/">login</a>
-                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{route('register')}}">crear cuenta</a>
-                </nav>
+                @auth
+                    <nav class="flex gap-6">
+                        <a class="font-bold text-gray-600 text-sm" href="#">
+                            Hola: 
+                            <span class="font-normal">
+                                {{auth()->user()->username}}
+                            </span>
+                        
+                        </a>
+
+                        <form method="POST" action="{{route('logout')}}">
+                            @csrf
+                            <button type="submit" class="font-bold uppercase text-gray-600 text-sm">
+                                Cerrar Sesión
+                            </button>
+                        </form> 
+                    </nav>
+                @endauth
+
+                @guest
+                    <nav class="flex gap-2">
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{route('login')}}">login</a>
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{route('register')}}">crear cuenta</a>
+                    </nav>
+                @endguest
+
             </div>
             
         </header>
